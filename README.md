@@ -21,7 +21,7 @@ contextual progressbar with golang
 
 ```go
     //senario 2 multi line from one progress
-    
+
     //pp := p.NewCancelContext(p.Box7, 100)
     //pp := p.NewTimeoutContex(p.Spin4, 100, time.Second*7)
     pp := p.NewDeadlineContext(p.Emoji, 100, time.Now().Add(time.Second*7))
@@ -34,6 +34,9 @@ contextual progressbar with golang
     }()
     
 ```
+
+![gif](1.gif)
+![gif](2.gif)
 
 
 
