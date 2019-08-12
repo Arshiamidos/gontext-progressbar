@@ -1,9 +1,7 @@
 package main
 
 import (
-	"context"
 	"fmt"
-	"time"
 )
 
 func main() {
@@ -19,11 +17,15 @@ func main() {
 	} */
 	//ctx, cancel := context.WithCancel(context.Background())
 	//ctx, cancel := context.WithDeadline(context.Background(), time.Now().Add(time.Second*3))
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
+	//ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
+	//ctx := context.WithValue(context.Background(), "arash", "midos")
 
-	defer cancel()
-	fmt.Println("start")
+	//	defer cancel()
+	fmt.Println("start",
+		ctx.Value("arash"),
+		ctx.Value("arash1"),
+		ctx.Value("arash2"),
+	)
 
-	<-ctx.Done()
 	fmt.Println("fin")
 }
